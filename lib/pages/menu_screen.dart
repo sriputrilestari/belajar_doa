@@ -1,3 +1,4 @@
+import 'package:apiflutter/pages/barang/barang_list_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:apiflutter/pages/home_screen.dart';
 import 'package:apiflutter/pages/posts/list_post_screen.dart';
@@ -18,6 +19,7 @@ class _MenuScreenState extends State<MenuScreen> {
     HomeScreen(), // Ganti dari Center(text: ...) ke HomeScreen()
     ListPostScreen(),
     ProductListScreen(),
+    ListGanjilScreen(),
     ProfileScreen(),
   ];
 
@@ -35,11 +37,9 @@ class _MenuScreenState extends State<MenuScreen> {
         type: BottomNavigationBarType.fixed,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Beranda'),
-          BottomNavigationBarItem(icon: Icon(Icons.article), label: 'Posts'),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
-            label: 'Produk',
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.article), label: 'List'),
+          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: 'Produk'),
+          BottomNavigationBarItem(icon: Icon(Icons.article), label: 'Barang'),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
       ),

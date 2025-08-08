@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:apiflutter/pages/auth/login_screen.dart';
+import 'package:apiflutter/pages/menu_screen.dart';
 import 'package:apiflutter/pages/posts/list_post_screen.dart';
 import 'package:apiflutter/services/auth_service.dart';
 
@@ -12,10 +13,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Auth Example',
-      home: AuthCheck(),
-    );
+    return MaterialApp(title: 'Auth Example', home: AuthCheck());
   }
 }
 
@@ -46,7 +44,7 @@ class _AuthCheckState extends State<AuthCheck> {
             body: Center(child: CircularProgressIndicator()),
           );
         } else if (snapshot.hasData && snapshot.data == true) {
-          return const ListPostScreen();
+          return const MenuScreen();
         } else {
           return LoginScreen();
         }
